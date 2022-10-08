@@ -1,7 +1,6 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
 int p_number (int x)
 {
     switch(x)
