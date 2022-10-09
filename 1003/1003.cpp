@@ -1,11 +1,15 @@
 #include <iostream>
+#include <map>
 using namespace std;
 int main ()
 {
     int x;
-
+    string s;
     cin>>x;
-    cout<<x;
+    for(int i = 0;i<x;i++)
+    {
+        cin>>s;
+    }
     return 0;
 }
 //
