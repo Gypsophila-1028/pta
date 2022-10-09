@@ -1,45 +1,48 @@
 #include <stdio.h>
-int main()
+int main ()
 {
-    int sum=0,i=0,n=0,test,b=0;
+    int sum=0,i=0,n,s=0,b=0,c=0;
     char a[101]={};
-    while(1)
+    while(1)  //求位数
     {
         scanf("%c",&a[i]);
         if(a[i]>='0'&&a[i]<='9')
+        {
             i++;
+        }
         else break;
     }
     a[i]='\0';
     i=0;
 
-    while(a[i]!='\0')
+
+    while(a[i]!='\0')  //求累计值
     {
-        sum+=a[i]-'0';
+        sum=sum+a[i]-'0';
         i++;
     }
-    test=sum;
+    n=sum;  //累计值
 
-    while(1)
+    while(1)  //求累计值的位数
     {
-        n++;
-        test/=10;
-        if(test==0)  break;
+        s++;  //位数
+        n/=10;
+        if(n==0) break;
     }
-    test=sum;
-
-    while(test)
-    {
-        b*=10;
-        b+=test%10;
-        test/=10;
-    }
-    sum=b;
+    n=sum;
 
     while(n)
     {
-        if((sum%10<=9&&sum%10>=0)&&n!=1)
-            switch(sum%10)
+        b*=10;
+        b=b+n%10;
+        n/=10;
+    }
+
+    while(s)
+    {
+        if((b%10>=0&&b%10<=9)&&s!=1)
+        {
+            switch (b%10)
             {
                 case 0:printf("ling ");break;
                 case 1:printf("yi ");break;
@@ -52,8 +55,9 @@ int main()
                 case 8:printf("ba ");break;
                 case 9:printf("jiu ");break;
             }
+        }
         else
-            switch(sum%10)
+            switch (b%10)
             {
                 case 0:printf("ling");break;
                 case 1:printf("yi");break;
@@ -66,8 +70,10 @@ int main()
                 case 8:printf("ba");break;
                 case 9:printf("jiu");break;
             }
-        sum/=10;
-        n--;
+        b/=10;
+        s--;
     }
+
     return 0;
 }
+
