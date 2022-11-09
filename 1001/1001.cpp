@@ -21,6 +21,3 @@ int main ()
     cout<<s;
     return 0;
 }
-//
-// Created by Gypsophila on 2022/10/8.
-//
