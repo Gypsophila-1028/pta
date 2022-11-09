@@ -1,3 +1,0 @@
-D:/project/pta/1001/CMakeFiles/1001.dir
-D:/project/pta/1001/CMakeFiles/edit_cache.dir
-D:/project/pta/1001/CMakeFiles/rebuild_cache.dir
